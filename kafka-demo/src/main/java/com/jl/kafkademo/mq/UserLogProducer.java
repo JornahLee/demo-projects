@@ -24,6 +24,10 @@ public class UserLogProducer {
         UserLog userLog = new UserLog();
         userLog.setUsername("jhp").setUserid(msg).setState("0");
         System.err.println("发送用户日志数据:" + userLog);
-        kafkaTemplate.send("user-log", userLog.toString());
+        kafkaTemplate.send("user-log", userLog.toString()).addCallback(success->{
+            System.out.println("success");
+        },fail->{
+            System.out.println("fail");
+        });
     }
 }
