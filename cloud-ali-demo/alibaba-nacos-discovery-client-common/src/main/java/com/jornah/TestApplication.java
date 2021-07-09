@@ -87,7 +87,7 @@ public class TestApplication {
     }
 
 
-    @FeignClient("alibaba-nacos-discovery-server")
+    @FeignClient(value = "alibaba-nacos-discovery-server",url = "http://localhost:8001")
     interface Client {
 
         @GetMapping("/hello")

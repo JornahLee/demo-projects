@@ -54,7 +54,8 @@ nacos里的确两个都显示注册了，为毛
 
 
 # 配置中心
-pom中无需依赖服务发现，配置中心可单独使用
+pom中无需依赖服务发现，配置中心可单独使用 
+ - 引入依赖 spring-cloud-starter-alibaba-nacos-discovery 并在Application类使用注解@NacosConfigurationProperties即可
 注： Netflix的配置中心 需要依赖 服务注册
 
 bootstrap.properties 与 application.properties 区别
