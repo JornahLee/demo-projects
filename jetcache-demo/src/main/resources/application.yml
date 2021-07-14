@@ -1,0 +1,18 @@
+#jetcache 集成使用
+jetcache:
+  statIntervalMinutes: 15
+  areaInCacheName: false
+  local:
+    default:
+      type: caffeine
+      # 自定义key的序列化器，先尝试 填jackson，根据错误信息 看源码一步步加进去的
+      # keyConvertor: bean:jackson
+      keyConvertor: fastjson
+      limit: 10000
+      defaultExpireInMillis: 10000
+  remote:
+    default:
+      type: redis.lettuce
+      #      keyConvertor: bean:jackson
+      keyConvertor: fastjson
+      uri: redis://127.0.0.1:6379
