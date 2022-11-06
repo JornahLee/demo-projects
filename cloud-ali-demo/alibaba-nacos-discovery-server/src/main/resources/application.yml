@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos_host}:8848
+#        register-enabled: false
+  application:
+    name: alibaba-nacos-discovery-server
+server:
+  port: 8002
+
+
+opentracing:
+  jaeger:
+    enabled: true
+    log-spans: true
+    const-sampler:
+      decision: true
+    #将日志发送到agent
+    udp-sender:
+      host: 192.168.0.102
+      port: 6831

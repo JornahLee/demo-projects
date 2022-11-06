@@ -11,6 +11,7 @@
     <modules>
         <module>alibaba-nacos-discovery-server</module>
         <module>alibaba-nacos-discovery-client-common</module>
+        <module>gateway-dynamic</module>
     </modules>
 
 

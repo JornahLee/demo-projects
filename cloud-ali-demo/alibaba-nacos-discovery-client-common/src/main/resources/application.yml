@@ -1,0 +1,13 @@
+opentracing:
+  jaeger:
+    udp-sender:
+      host: 192.168.0.102
+      port: 6831
+    remote-reporter:
+      flush-interval: 1000
+      max-queue-size: 5000
+    #      //队列长度
+    log-spans: true
+    probabilistic-sampler:
+      sampling-rate: 1
+#      //采样频率，1表示100%
